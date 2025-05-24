@@ -7,6 +7,8 @@ body {
   background-position: center center;
   font-family: "Roboto", sans-serif;
   position: static;
+  overscroll-behavior: none;
+  touch-action: manipulation;
 }
 
 a {
@@ -19,6 +21,8 @@ html {
 }
 
 video {
+  overscroll-behavior: none;
+  touch-action: manipulation;
   position: absolute;
   top: 0;
   left: 0;

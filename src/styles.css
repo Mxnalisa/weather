@@ -1,3 +1,14 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
+  background-color: black;
+}
+
 body {
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/166/533/original/pexels-enrique72-14688103.jpg?1748094004");
   background-repeat: no-repeat;

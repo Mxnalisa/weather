@@ -3,7 +3,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 100vh;
+  min-height: 100%;
   background-position: center center;
   font-family: "Roboto", sans-serif;
 }

@@ -1,14 +1,3 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-  touch-action: none;
-  overscroll-behavior: none;
-  background-color: black;
-}
-
 body {
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/166/533/original/pexels-enrique72-14688103.jpg?1748094004");
   background-repeat: no-repeat;
@@ -18,9 +7,8 @@ body {
   background-position: center center;
   font-family: "Roboto", sans-serif;
   position: static;
-  touch-action: manipulation;
   overscroll-behavior: none;
-  height: 100%;
+  touch-action: manipulation;
 }
 
 a {
@@ -28,13 +16,13 @@ a {
 }
 
 html {
-  touch-action: manipulation;
   overscroll-behavior: none;
+  touch-action: manipulation;
 }
 
 video {
   overscroll-behavior: none;
-
+  touch-action: manipulation;
   position: absolute;
   top: 0;
   left: 0;
@@ -142,25 +130,4 @@ footer {
   padding-top: 15px;
 
   color: rgba(39, 33, 66, 0.4);
-}
-
-@media (max-width: 768px) {
-  .weather-app {
-    width: 95%;
-    padding: 20px;
-  }
-
-  .current-weather {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .current-temperature-value {
-    font-size: 60px;
-  }
-
-  .current-city {
-    font-size: 28px;
-  }
 }

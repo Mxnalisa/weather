@@ -122,3 +122,30 @@ footer {
 
   color: rgba(39, 33, 66, 0.4);
 }
+
+@media (max-width: 768px) {
+  .weather-app {
+    margin: 30px 10px;
+    padding: 20px;
+  }
+
+  .search-input,
+  .search-button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .current-weather {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .current-temperature-value {
+    font-size: 60px;
+  }
+
+  .current-city {
+    font-size: 28px;
+  }
+}

@@ -33,7 +33,6 @@ html {
 }
 
 video {
-  overscroll-behavior: none;
   touch-action: manipulation;
   position: absolute;
   top: 0;

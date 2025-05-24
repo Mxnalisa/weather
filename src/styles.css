@@ -7,17 +7,21 @@ body {
   background-position: center center;
   font-family: "Roboto", sans-serif;
   position: static;
-  overscroll-behavior: none;
-  touch-action: manipulation;
 }
 
 a {
   color: #885df1;
 }
 
-html {
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  touch-action: none;
   overscroll-behavior: none;
-  touch-action: manipulation;
+  background-color: black;
 }
 
 video {

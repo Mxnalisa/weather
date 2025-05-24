@@ -3,19 +3,19 @@ function displayTemperature(response) {
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#current-city");
   let dateElement = document.querySelector("#current-date");
-  let conditionElement = document.querySelector("#current-condition");
+  let descriptionElement = document.querySelector("#current-condition");
   let humidityElement = document.querySelector("#current-humidity");
-  let windElement = document.querySelector("#current-wind-speed");
-  let iconElement = document.querySelector("#icon");
+  let windSpeedElement = document.querySelector("#current-wind-speed");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.city;
   dateElement.innerHTML = formatDate(date);
-  conditionElement.innerHTML = response.data.condition.description;
+  descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windElement.innerHTML = `${response.data.wind.speed}km/h`;
+  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon" />`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 }
 
 function search(event) {

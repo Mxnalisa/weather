@@ -6,7 +6,7 @@ function displayTemperature(response) {
   let conditionElement = document.querySelector("#current-condition");
   let humidityElement = document.querySelector("#current-humidity");
   let windElement = document.querySelector("#current-wind-speed");
-  let iconElement = document.querySelector("#current-temperature-icon");
+  let iconElement = document.querySelector("#icon");
   let date = new Date(response.data.time * 1000);
 
   cityElement.innerHTML = response.data.city;

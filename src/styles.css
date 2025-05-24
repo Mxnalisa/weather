@@ -1,9 +1,10 @@
 body {
- background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/166/533/original/pexels-enrique72-14688103.jpg?1748094004");
- background-repeat: no-repeat;        
- background-size: cover;              
- background-position: center center;  
-
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/166/533/original/pexels-enrique72-14688103.jpg?1748094004");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  background-position: center center;
   font-family: "Roboto", sans-serif;
 }
 

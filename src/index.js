@@ -1,27 +1,23 @@
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#current-temperature");
-  let temperature = Math.round(response.data.temperature.current);
+  let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#current-city");
   let dateElement = document.querySelector("#current-date");
   let conditionElement = document.querySelector("#current-condition");
   let humidityElement = document.querySelector("#current-humidity");
   let windElement = document.querySelector("#current-wind-speed");
-  let now = new Date();
-  let formattedDate = now.toLocaleDateString(undefined, {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
-  });
+  let iconElement = document.querySelector("#current-temperature-icon");
+  let date = new Date(response.data.time * 1000);
 
   cityElement.innerHTML = response.data.city;
-  dateElement.innerHTML = formattedDate;
-  conditionElement.innerHTML = `, ${response.data.condition.description}`;
+  dateElement.innerHTML = formatDate(date);
+  conditionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
-  temperatureElement.innerHTML = `${temperature}°`;
-
-  console.log(response.data.condition.description);
+  temperatureElement.innerHTML = Math.round(temperature);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 }
+
 function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#search-input");

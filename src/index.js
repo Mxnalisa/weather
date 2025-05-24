@@ -19,6 +19,8 @@ function displayTemperature(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = `${temperature}°`;
+
+  console.log(response.data.condition.description);
 }
 function search(event) {
   event.preventDefault();
